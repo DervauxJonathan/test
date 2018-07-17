@@ -2,11 +2,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+
 }
 
 #test {
   height: 300px;
   width: 450px;
+  z-index: 9998;
+  position: fixed;
 }
 
 #test2 {
@@ -143,4 +146,11 @@ close-btn {
 
 #img3 {
   padding-bottom: 15px;
+}
+
+.container {
+  background: url("./google.jpg");
+  width: 100%;
+  height: 600px;
+  z-index: 1;
 }
