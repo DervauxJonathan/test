@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Pop-up</title>
+  <link rel="stylesheet" href="master.css">
+</head>
+<body>
+  <div id="test" class="bounceIn">
+    <div class="btn">
+      <img id="close-btn" src="close.png" alt="" onclick='closePopup()'>
+    </div>
+    <div id="test2">
+      <h1 id="title-popup">Welcome, what about you?</h1>
+        <a href="www.google.be"><img id="img1" src="radio-business.png" alt=""></a>
+        <a href="www.google.fr"><img id="img2" src="podcaster.png" alt=""></a>
+        <img id="img3" src="guest-visiting.png" alt="" onclick='nextPopup()'>
+    </div>
+  </div>
+  <script type="text/javascript">
+
+    function nextPopup() {
+      document.getElementById('title-popup').innerHTML = 'Last question, what do you do?';
+      document.getElementById('img1').src = "politics.png";
+      document.getElementById('img2').src = "often-invited.png";
+      document.getElementById('img3').src = "just-visitor.png";
+    }
+
+    function closePopup() {
+  var target = document.getElementById('test')
+  target.setAttribute('class', 'bounceOut' );
+  target.addEventListener('animationend', function(){
+     target.setAttribute('class', 'hidden' );
+  })
+}
+  </script>
+</body>
+</html>
