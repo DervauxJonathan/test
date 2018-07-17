@@ -31,13 +31,25 @@
       document.getElementById('img1').src = "politics.png";
       document.getElementById('img2').src = "often-invited.png";
       document.getElementById('img3').src = "just-visitor.png";
-    }
+      document.getElementById('img3').onclick = function()
+        {
+          closePopup();
+          return false;
+        }
+      }
+
+   //  function removeBlur() {
+   //   document.getElementsByClassName("container")[0].style.WebkitFilter = 'blur(0px)';
+   //   document.getElementsByClassName("container")[0].style.filter= 'blur(0px)';
+   // }
 
     function closePopup() {
   var target = document.getElementById('test')
   target.setAttribute('class', 'bounceOut' );
   target.addEventListener('animationend', function(){
      target.setAttribute('class', 'hidden' );
+     document.getElementsByClassName("container")[0].style.WebkitFilter = 'blur(0px)';
+     document.getElementsByClassName("container")[0].style.filter= 'blur(0px)';
   })
 }
   </script>
